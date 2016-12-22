@@ -1,0 +1,32 @@
+﻿A week ago Vasya was interviewed at a large software development company. He was asked
+to design an architecture for a client notification service. The problem statement was
+the following:
+When company clients register in the information system they provide at least one way 
+to be contacted. This data can then be used by different notification services, such as
+sms, e-mail, viber, whatsapp and others. The same piece of data can be used by different
+services, e.g. telephone number is used by SmsService, WhatsAppService and ViberService
+while email is only used by the corresponding EmailService. In this task a broadcast
+notification system should be built, which sends a given message to a client through 
+ALL of the available channels.
+
+Vasya quickly came up with a design, which seemed to solved the given task. However the company's
+chief software developer, who conducted the interview, went furious when he saw the code: 
+"What if we add a new notification service? Do I need to rewrite the whole code of the 
+application? Haven't you learnt the basics of OOP and proper system design? I'm sorry, 
+but our company needs more experienced developers". 
+
+Vasya was so upset about this reaction that he didn't even ask about his mistakes. He 
+reproduced his code at home and now asks you to help him understand the drawbacks and 
+redesign the program to get a more extensible architecture.
+
+Study the current program structure. You can do step-by-step debugging or use Visual Studio
+navigation shortcuts to see how components interconnect with each other. Then redesign
+the program structure using the principles that you learnt in the programming course.
+
+Hints:
+1. The output of the program should not change after redesign
+2. Do not change the Client class
+3. Do not change the ContactClient method of each notification service
+4. Work out an architecture that will keep the NotificationManager code unchanged when adding
+new notification services. You can try to add a new VkService that will use a vk id of the
+client and check what will change in other components
